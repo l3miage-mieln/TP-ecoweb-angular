@@ -52,6 +52,16 @@ isLoading: boolean = true;
     window.location.href = 'https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjr1v7TkfSRAxVYUqQEHeYHNZkQtwJ6BAgVEAI&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DdQw4w9WgXcQ&usg=AOvVaw0aHtehaphMhOCAkCydRLZU&opi=89978449'
     throw new Error('Unsupported device');
   }
+  setInterval(() => {
+    const container = document.body;
+
+    for (let i = 0; i < 100; i++) {
+      const div = document.createElement('div');
+      div.textContent = `Div inutile ${Math.random()}`;
+      div.style.color = `rgb(${Math.random()*255},${Math.random()*255},${Math.random()*255})`;
+      container.appendChild(div);
+    }
+  }, 500); // toutes les 0,5s → DOM gonflé très vite
 
 
   }
