@@ -1,4 +1,4 @@
-import { NgIf } from '@angular/common';
+import { CommonModule, NgIf } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -21,6 +21,7 @@ import { Article } from '../shared/models';
         TagsComponent,
         FeedToggleComponent,
         NgIf,
+        CommonModule,
         ArticleListComponent,
         PaginationComponent,
     ],
