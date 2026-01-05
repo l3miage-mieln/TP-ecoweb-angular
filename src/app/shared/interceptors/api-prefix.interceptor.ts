@@ -9,6 +9,7 @@ export const apiPrefixInterceptor: HttpInterceptorFn = (
   if (!req.url.includes('http')) {
     const reqClone = req.clone({
       url: `${env.apiUrl}${req.url}`,
+      cache: 'no-store'
     });
     return next(reqClone);
   }
