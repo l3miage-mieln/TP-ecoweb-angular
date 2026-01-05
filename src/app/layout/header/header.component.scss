@@ -11,7 +11,11 @@ header {
     color: var(--green-color);
     text-decoration: none;
   }
-
+  .gif {
+  height: 50px;
+  margin-left: 20px;
+  width: 100px;
+}
   .nav-bar {
     display: flex;
     gap: 16px;
@@ -35,3 +39,4 @@ header {
     }
   }
 }
+
