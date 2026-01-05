@@ -1,4 +1,4 @@
-import { NgFor, NgIf, NgStyle } from '@angular/common';
+import { CommonModule, NgFor, NgIf, NgStyle } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -11,7 +11,7 @@ import { AuthStore } from 'src/app/shared/store';
 
 @Component({
     selector: 'app-header',
-    imports: [RouterLink, NgFor, RouterLinkActive, NgIf, NgStyle],
+    imports: [RouterLink, NgFor, RouterLinkActive, NgIf,CommonModule],
     templateUrl: './header.component.html',
     styleUrls: ['./header.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush
