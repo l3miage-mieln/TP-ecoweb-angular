@@ -1,5 +1,8 @@
 <header>
   <a routerLink="" class="logo">conduit</a>
+<img *ngIf="isLoading"
+     src="https://media.tenor.com/x8v1oNUOmg4AAAAM/rickroll-roll.gif"
+     alt="loading" class="gif"/>
   <ul class="nav-bar">
     <ng-container *ngFor="let item of menu(); let idx = index">
       <li

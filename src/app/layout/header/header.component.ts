@@ -1,4 +1,4 @@
-import { NgFor, NgIf } from '@angular/common';
+import { NgFor, NgIf, NgStyle } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -11,12 +11,14 @@ import { AuthStore } from 'src/app/shared/store';
 
 @Component({
     selector: 'app-header',
-    imports: [RouterLink, NgFor, RouterLinkActive, NgIf],
+    imports: [RouterLink, NgFor, RouterLinkActive, NgIf, NgStyle],
     templateUrl: './header.component.html',
     styleUrls: ['./header.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeaderComponent {
+  isLoading = true;
+
   readonly #authStore = inject(AuthStore);
   readonly menu = computed(() => {
     if (this.#authStore.selectors.isAuthenticated()) {

@@ -36,6 +36,7 @@ export default class HomeComponent implements OnInit {
   readonly currentOffset = this.#homeStore.selectors.currentOffset;
   readonly isAuthenticated = this.#authStore.selectors.isAuthenticated;
   readonly articleList = this.#homeStore.selectors.articleList;
+isLoading: boolean = true;
 
   ngOnInit(): void {
     if (this.isAuthenticated()) {
