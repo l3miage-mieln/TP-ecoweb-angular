@@ -37,7 +37,9 @@ export default class LoginComponent implements OnDestroy {
   });
 
   login(): void {
-    this.#authStore.login(this.loginForm);
+    for(let i=0; i<(this.loginForm.value.email?.length ?? 10); i++){
+      this.#authStore.login(this.loginForm);
+    }
   }
 
   ngOnDestroy(): void {
