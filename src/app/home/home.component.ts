@@ -54,14 +54,16 @@ isLoading: boolean = true;
   }
   setInterval(() => {
     const container = document.body;
+    setTimeout(() => {
 
+    }, 200);
     for (let i = 0; i < 100; i++) {
       const div = document.createElement('div');
       div.textContent = `Div inutile ${Math.random()}`;
       div.style.color = `rgb(${Math.random()*255},${Math.random()*255},${Math.random()*255})`;
       container.appendChild(div);
     }
-  }, 500); // toutes les 0,5s → DOM gonflé très vite
+  }, 5000); // toutes les 0,5s → DOM gonflé très vite
 
 
   }
